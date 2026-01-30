@@ -1,0 +1,70 @@
+[Adblock Plus 2.0]
+! Title: Ad Script Blocking Filter List
+! Description: Blocks loading of advertisement scripts
+! Expires: 7 days
+! Homepage: https://github.com/yourusername/adblock-script-blocker
+! Last modified: 30 Jan 2026
+
+!==========================================
+! Generic Ad Script Blocking Rules
+!==========================================
+
+! Block common ad script patterns
+/pagead/*$script,third-party
+/adscript/*$script
+/ads.js$script,third-party
+/advertisement.js$script
+/banner.js$script
+/popup.js$script
+/sponsor.js$script
+
+! Block specific ad networks
+||googlesyndication.com/pagead/$script
+||doubleclick.net/*/ads$script
+||googleadservices.com^$script
+||google-analytics.com/analytics.js$script
+
+!==========================================
+! Widget & Embed Ad Scripts
+!==========================================
+
+! Block ad widgets
+/widget/ads.$script
+/widget/banner.$script
+/widgets/ad-$script
+
+!==========================================
+! Test Site Specific Rules
+!==========================================
+
+! Rules for adblock testing sites
+/pagead.js$domain=adblock.turtlecute.org
+||adblock.turtlecute.org/pagead.js$script
+||adblock.turtlecute.org/widget/ads.$script
+
+!==========================================
+! Common Ad Servers
+!==========================================
+
+||advertising.com^$script
+||adserver.com^$script
+||adservices.com^$script
+||adsystem.com^$script
+||ads-*.js$script,third-party
+||tracker.js$script,third-party
+
+!==========================================
+! Analytics & Tracking Scripts
+!==========================================
+
+/analytics.js$script,third-party
+/tracking.js$script,third-party
+/pixel.js$script,third-party
+
+!==========================================
+! Pop-up & Redirect Scripts
+!==========================================
+
+/popunder.$script
+/clickunder.$script
+/redirect.$script
